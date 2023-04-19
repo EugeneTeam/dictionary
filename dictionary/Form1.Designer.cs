@@ -1,6 +1,6 @@
 ﻿namespace dictionary
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,18 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
+            WordList = new TabControl();
+            tabPage1 = new TabPage();
+            tabPage2 = new TabPage();
+            WordList.SuspendLayout();
             SuspendLayout();
             // 
-            // Form1
+            // WordList
+            // 
+            WordList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            WordList.Controls.Add(tabPage1);
+            WordList.Controls.Add(tabPage2);
+            WordList.Location = new Point(12, 12);
+            WordList.Name = "WordList";
+            WordList.SelectedIndex = 0;
+            WordList.Size = new Size(776, 624);
+            WordList.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(768, 596);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Words list";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(768, 398);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Learn";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Name = "Form1";
-            Text = "Form1";
+            ClientSize = new Size(800, 648);
+            Controls.Add(WordList);
+            Name = "MainForm";
+            Text = "Main";
+            WordList.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
+
+        private TabControl WordList;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
     }
 }
