@@ -60,12 +60,12 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(768, 398);
+            tabPage2.Size = new Size(768, 596);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Learn";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // MainForm
+            // 
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -74,7 +74,6 @@
             Name = "MainForm";
             Text = "Main";
             WordList.ResumeLayout(false);
-            ResumeLayout(false);
         }
 
         #endregion

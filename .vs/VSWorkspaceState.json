@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\dictionary",
+    "\\dictionary\\db"
   ],
-  "SelectedNode": "\\C:\\Users\\user\\Source\\Repos\\dictionary",
+  "SelectedNode": "\\dictionary\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,3 +1,6 @@
+using DB;
+using Npgsql;
+
 namespace dictionary
 {
     public partial class MainForm : Form
@@ -6,6 +9,5 @@ namespace dictionary
         {
             InitializeComponent();
         }
-
     }
 }

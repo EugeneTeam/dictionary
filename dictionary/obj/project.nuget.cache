@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "HdOTbGvPriRBC/ZyeHiRDqX+IwmHHR+pK5cASxigy1kur2liZH5MWxIpq/ExywRDxdCshmdFLc03wMGulv0q4w==",
+  "dgSpecHash": "sNwHYlyVad+E1XzE/LU5dKIuh4kokDJIaTY7PX3rq5jstIq1XVD61ifowp+tTxeeIcm0vqHIPw5VlNnpP5PXsA==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\dictionary\\dictionary\\dictionary.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\npgsql\\7.0.2\\npgsql.7.0.2.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
