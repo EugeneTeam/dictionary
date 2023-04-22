@@ -1,57 +1,27 @@
-using Npgsql;
+﻿using Npgsql;
 
-namespace DB
+namespace dictionary.DB
 {
-    class DbConnection
+    internal class DbConnection
     {
-        public static void Connect()
-        {
-            string ConnectionString = DbConnection.GetConnectString();
-
-            using (NpgsqlConnection connection = new NpgsqlConnection(ConnectionString))
-            {
-                connection.Open();
-
-
-
-                connection.Close();
-            }
-        }
-
+        
         public static NpgsqlConnection? OpenConnection()
         {
-            string ConncetionString = DbConnection.GetConnectString();
             try
             {
-                NpgsqlConnection connection = new NpgsqlConnection(ConncetionString);
+                NpgsqlConnection connection = new NpgsqlConnection(DbConnection.GetConnectionString());
                 connection.Open();
                 return connection;
-            } 
-            catch (NpgsqlException exception) 
+            } catch (Exception e)
             {
-                Console.WriteLine(exception.Message);
-            }
-            return null;
-        }
-
-        public static void CloseConnection(NpgsqlConnection? connection)
-        {
-            try
-            {
-                if (connection != null)
-                {
-                    connection.Close();
-                }
-            }
-            catch (NpgsqlException exception)
-            {
-                Console.WriteLine(exception.Message);
+                MessageBox.Show(e.Message);
+                return null;
             }
         }
-
-        private static string GetConnectString()
+    
+        private static string GetConnectionString()
         {
-            var ConnectionOptions = new
+            var ConncetinoData = new
             {
                 Host = "localhost",
                 Port = 5432,
@@ -60,16 +30,14 @@ namespace DB
                 Password = "mysecretpassword"
             };
 
-            string ConnectionString = string.Format(
+            return string.Format(
                 "Host={0};Port={1};Database={2};Username={3};Password={4}",
-                    ConnectionOptions.Host,
-                    ConnectionOptions.Port,
-                    ConnectionOptions.Database,
-                    ConnectionOptions.Username,
-                    ConnectionOptions.Password
+                ConncetinoData.Host,
+                ConncetinoData.Port,
+                ConncetinoData.Database,
+                ConncetinoData.Username,
+                ConncetinoData.Password
                 );
-
-            return ConnectionString;
         }
     }
 }
