@@ -5,6 +5,12 @@ namespace dictionary.Entities
 {
     class Word
     {
+        private static int limit = Constants.DEFAULT_LIMIT;
+        private static int offset = Constants.DEFAULT_OFFSET;
+
+        public static int Limit { get { return limit; } set {  limit = value; } }
+        public static int Offset { get { return offset; } set {  offset = value; } }
+
         public static Dictionary<int, string>? Search(string search)
         {
             var connection = DbConnection.OpenConnection();

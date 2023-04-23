@@ -37,9 +37,9 @@
             ItemPerPageValue = new NumericUpDown();
             label1 = new Label();
             ItemsInList = new Label();
-            button2 = new Button();
+            NextPage = new Button();
             SearchValue = new TextBox();
-            button1 = new Button();
+            PreviewPage = new Button();
             WordsList = new ListBox();
             WordList.SuspendLayout();
             tabPage3.SuspendLayout();
@@ -84,9 +84,9 @@
             tabPage3.Controls.Add(ReloadList);
             tabPage3.Controls.Add(groupBox1);
             tabPage3.Controls.Add(ItemsInList);
-            tabPage3.Controls.Add(button2);
+            tabPage3.Controls.Add(NextPage);
             tabPage3.Controls.Add(SearchValue);
-            tabPage3.Controls.Add(button1);
+            tabPage3.Controls.Add(PreviewPage);
             tabPage3.Controls.Add(WordsList);
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
@@ -144,15 +144,16 @@
             ItemsInList.TabIndex = 5;
             ItemsInList.Text = "label1";
             // 
-            // button2
+            // NextPage
             // 
-            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            button2.Location = new Point(152, 571);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 4;
-            button2.Text = ">";
-            button2.UseVisualStyleBackColor = true;
+            NextPage.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            NextPage.Location = new Point(152, 571);
+            NextPage.Name = "NextPage";
+            NextPage.Size = new Size(75, 23);
+            NextPage.TabIndex = 4;
+            NextPage.Text = ">";
+            NextPage.UseVisualStyleBackColor = true;
+            NextPage.Click += NextPage_Click;
             // 
             // SearchValue
             // 
@@ -162,15 +163,16 @@
             SearchValue.TabIndex = 3;
             SearchValue.TextChanged += textBox1_TextChanged;
             // 
-            // button1
+            // PreviewPage
             // 
-            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            button1.Location = new Point(3, 570);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
-            button1.Text = "<";
-            button1.UseVisualStyleBackColor = true;
+            PreviewPage.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            PreviewPage.Location = new Point(3, 570);
+            PreviewPage.Name = "PreviewPage";
+            PreviewPage.Size = new Size(75, 23);
+            PreviewPage.TabIndex = 2;
+            PreviewPage.Text = "<";
+            PreviewPage.UseVisualStyleBackColor = true;
+            PreviewPage.Click += PreviewPage_Click;
             // 
             // WordsList
             // 
@@ -181,6 +183,7 @@
             WordsList.Name = "WordsList";
             WordsList.Size = new Size(224, 529);
             WordsList.TabIndex = 0;
+            WordsList.SelectedValueChanged += WordsList_SelectedValueChanged;
             // 
             // MainForm
             // 
@@ -207,9 +210,9 @@
         private TabPage tabPage2;
         private TabPage tabPage3;
         private ListBox WordsList;
-        private Button button2;
+        private Button NextPage;
         private TextBox SearchValue;
-        private Button button1;
+        private Button PreviewPage;
         private Label ItemsInList;
         private GroupBox groupBox1;
         private NumericUpDown ItemPerPageValue;

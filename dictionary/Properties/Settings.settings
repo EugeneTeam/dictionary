@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="dictionary.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Host=localhost;Port=5432;Database=dictionary;Username=postgres;Password=mysecretpassword</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -30,3 +30,4 @@ C:\Users\user\source\repos\dictionary\dictionary\bin\Debug\net6.0-windows\Micros
 C:\Users\user\source\repos\dictionary\dictionary\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
 C:\Users\user\source\repos\dictionary\dictionary\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
 C:\Users\user\source\repos\dictionary\dictionary\bin\Debug\net6.0-windows\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\user\source\repos\dictionary\dictionary\bin\Debug\net6.0-windows\dictionary.dll.config
